@@ -1,0 +1,16 @@
+html { height: 100%; }
+body {
+    margin: 0; /* Убираем отступы */
+    height: 100%; /* Высота страницы */
+    background: url(../images/main.jpg); /* Параметры фона */
+    background-size: cover; /* Фон занимает всю доступную площадь */
+   }
+#info{
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* width: 200px;
+    height:100px; */
+    margin: -50px 0 0 -200px;
+    /* background: #f0f0f0; */
+}

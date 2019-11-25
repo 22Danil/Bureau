@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a7d153c5-1fdd-48bf-b0eb-850559a9a341" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/server/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="64150808-fda6-4257-84f8-59cb65752793" name="Local Server" port="8000" use_path_mappings="true" />
+      <server host="127.0.0.1" id="5b54fce5-8a5e-4112-a976-7e754997956b" name="127.0.0.1" port="8000" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
+    <include_path>
+      <path value="$PROJECT_DIR$/server/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/server/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/server/vendor/composer" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/server/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/server/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/server/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/server/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/server/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/server/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/server/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/server/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/server/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/server/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/server/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/server/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/server/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/server/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/server/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/server/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/server/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/server/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/firebase/php-jwt" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1RsMEDJ9O7Ig3hOdYuHZryjJcsl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projects\Bureau\server\src\Controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Symfony Server" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/server/bin/console" scriptParameters="server:run">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="localhost" start_url="localhost:8000">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7d153c5-1fdd-48bf-b0eb-850559a9a341" name="Default Changelist" comment="" />
+      <created>1562860828577</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562860828577</updated>
+      <workItem from="1562860835633" duration="2443000" />
+      <workItem from="1562927589542" duration="9988000" />
+      <workItem from="1563193634613" duration="6375000" />
+      <workItem from="1563284943833" duration="2501000" />
+      <workItem from="1563354087002" duration="11978000" />
+      <workItem from="1563463361360" duration="5851000" />
+      <workItem from="1563473207101" duration="480000" />
+      <workItem from="1563802109845" duration="8236000" />
+      <workItem from="1563899582056" duration="450000" />
+      <workItem from="1563974847765" duration="12716000" />
+      <workItem from="1564055212832" duration="654000" />
+      <workItem from="1564060920587" duration="16685000" />
+      <workItem from="1564142831150" duration="13792000" />
+      <workItem from="1564243118671" duration="7254000" />
+      <workItem from="1564303742394" duration="3062000" />
+      <workItem from="1564319542852" duration="7384000" />
+      <workItem from="1564400078512" duration="10507000" />
+      <workItem from="1564571606908" duration="3689000" />
+      <workItem from="1564646572198" duration="5446000" />
+      <workItem from="1565107578195" duration="4357000" />
+      <workItem from="1565191109274" duration="12319000" />
+      <workItem from="1565261038587" duration="11135000" />
+      <workItem from="1565623197446" duration="8245000" />
+      <workItem from="1565703961149" duration="8329000" />
+      <workItem from="1565794586324" duration="5097000" />
+      <workItem from="1565875720254" duration="9287000" />
+      <workItem from="1565953207208" duration="1890000" />
+      <workItem from="1570451249865" duration="4867000" />
+      <workItem from="1571245022581" duration="3264000" />
+      <workItem from="1571293807960" duration="1458000" />
+      <workItem from="1573501816764" duration="776000" />
+      <workItem from="1573512251517" duration="2008000" />
+      <workItem from="1573560021393" duration="19978000" />
+      <workItem from="1573666330871" duration="10662000" />
+      <workItem from="1573748333584" duration="713000" />
+      <workItem from="1573761481962" duration="589000" />
+      <workItem from="1573841410453" duration="5505000" />
+      <workItem from="1573849121292" duration="1797000" />
+      <workItem from="1573894477858" duration="9360000" />
+      <workItem from="1573918085375" duration="12757000" />
+      <workItem from="1573946351787" duration="300000" />
+      <workItem from="1573994538876" duration="30030000" />
+      <workItem from="1574083499202" duration="9975000" />
+      <workItem from="1574113728892" duration="3453000" />
+      <workItem from="1574169914321" duration="1517000" />
+      <workItem from="1574199714428" duration="1698000" />
+      <workItem from="1574269543372" duration="669000" />
+      <workItem from="1574275201680" duration="584000" />
+      <workItem from="1574280077986" duration="932000" />
+      <workItem from="1574319433726" duration="1302000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/server/src/Controller/FormController.php</url>
+          <line>90</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/server/src/Controller/FormController.php</url>
+          <line>121</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/server/src/Controller/FormController.php</url>
+          <line>145</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="router.php">
+        <watch expression="$e" language="PHP" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
