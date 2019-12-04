@@ -96,6 +96,7 @@ class ReceiptController extends AbstractController
             $receipt_id = $Data->id;
             $card = $Data->card;
             $cost = $Data->cost;
+            $cost = $cost + 200;
             $JWT = $Data->token;
             $decoded = JWT::decode($JWT, $key_JWT, array('HS256'));
             $user_id = $decoded->id;

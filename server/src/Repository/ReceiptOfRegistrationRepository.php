@@ -23,10 +23,11 @@ class ReceiptOfRegistrationRepository extends ServiceEntityRepository
     {
         $conn = $this->getEntityManager()->getConnection();
 
-        $sql = 'SELECT r.id, r.estimated_salary, r.prepayment, r.employer_id, r.position_id, r.specialty_id, p.name as nameposition, s.name as namespecialty, r.dateadded
+        $sql = 'SELECT h.name, h.lastname, h.middlename, r.id, r.estimated_salary, r.prepayment, r.employer_id, r.position_id, r.specialty_id, p.name as nameposition, s.name as namespecialty, r.dateadded
                 FROM receipt_of_registration r
                 INNER JOIN position p ON r.position_id=p.id
                 INNER JOIN specialty s ON r.specialty_id=s.id
+                INNER JOIN identity h ON r.identity_id=h.id
                 WHERE r.identity_id = :user_id AND r.paid = false ';
         $stmt = $conn->prepare($sql);
         $stmt->execute(['user_id' => $user_id]);

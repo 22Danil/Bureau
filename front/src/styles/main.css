@@ -1,8 +1,7 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 #main{
-    border: 1px solid red;
     overflow:auto;
     margin: 5px;
 }
@@ -13,40 +12,42 @@
     padding:15px;
     margin-top:7px;
     text-align:center;
+} */
+#centr{
+  /* position: absolute;
+  left: 40%; */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width:600px) {
-    /* For mobile phones: */
-    #columns { column-gap: 0px; }
-    #columns figure { width: 100%; }
-    #rightMenu, #content{
-        width:100%;
-    }
+#mainBlock{
+    background: #2B2727; 
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px; 
+    margin: 2px;
+    width: 99%;
+    min-height: 69%;
+    max-height: 69%;
+    position: absolute;
+    top:20%;
+    overflow-y: auto; 
 }
-#textover{
-    overflow: hidden; /* Обрезаем все, что не помещается в область */
-    text-overflow: ellipsis; /* Добавляем многоточие */
-    max-height: 150px;
-}
-#columns {
-    column-width: 320px;
-    column-gap: 5px;
-    width: 80%;
-}
-
-div#columns figure {
-    background: #fefefe;
-    border: 2px solid #fcfcfc;
-    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-   /* margin: 0 2px 10px;*/
-    margin-top: 10px;
-    margin-left: 10px;
-    /*padding: 5px;*/
-    transition: opacity .4s ease-in-out;
-    display: inline-block;
-    column-break-inside: avoid;
-}
-
-div#columns:hover figure:not(:hover) {
-    opacity: 0.4;
-}
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+  }
+  .wrapper > * {
+    flex: 1 100%;
+  }
+  
+  @media all and (min-width: 800px) {
+    .main    { flex: 3 0px; }
+  }
+  
+  body {
+    padding: 7px; 
+  }
+  

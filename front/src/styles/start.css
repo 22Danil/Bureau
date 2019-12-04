@@ -5,12 +5,49 @@ body {
     background: url(../images/main.jpg); /* Параметры фона */
     background-size: cover; /* Фон занимает всю доступную площадь */
    }
-#info{
+#main{
     position: fixed; /* or absolute */
-    top: 50%;
-    left: 50%;
+    top: 35%;
+    left: 42%;
+    background: #2B2727; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 10px; /* Поля вокруг текста */
+    border-radius: 5px; /* Уголки */
     /* width: 200px;
     height:100px; */
     margin: -50px 0 0 -200px;
     /* background: #f0f0f0; */
+}
+input {
+    color: white;
+  }
+#signin{
+    position: fixed; /* or absolute */
+    top: 35%;
+    left: 45%;
+    background: #2B2727; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 10px; /* Поля вокруг текста */
+    border-radius: 5px; /* Уголки */
+    /* width: 200px;
+    height:100px; */
+    margin: -50px 0 0 -200px;
+    /* background: #f0f0f0; */
+}
+#signup{
+    position: fixed; /* or absolute */
+    top: 35%;
+    left: 38%;
+    background: #2B2727; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 10px; /* Поля вокруг текста */
+    border-radius: 5px; /* Уголки */
+    /* width: 200px;
+    height:100px; */
+    margin: -50px 0 0 -200px;
+    /* background: #f0f0f0; */
+}
+p{
+    font-family: "times_new_roman";
+    font-size: 150%;
 }

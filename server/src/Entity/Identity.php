@@ -59,6 +59,16 @@ class Identity
     /**
      * @ORM\Column(type="text")
      */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $middlename;
+
+    /**
+     * @ORM\Column(type="text")
+     */
     private $login;
 
     /**
@@ -106,6 +116,38 @@ class Identity
     public function setName($name): void
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * @param mixed $lastname
+     */
+    public function setLastname($lastname): void
+    {
+        $this->lastname = $lastname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMiddlename()
+    {
+        return $this->middlename;
+    }
+
+    /**
+     * @param mixed $middlename
+     */
+    public function setMiddlename($middlename): void
+    {
+        $this->middlename = $middlename;
     }
 
     /**

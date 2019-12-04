@@ -11,3 +11,16 @@
     top:20%;
     overflow-y: auto; 
 }
+#test{
+    
+}
+#centr{
+    /* position: absolute;
+    left: 40%; */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  

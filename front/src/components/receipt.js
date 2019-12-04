@@ -1,7 +1,39 @@
 import React, { Component } from "react";
 import axios from "axios";
-//import '../styles/users.css';
+import '../styles/receipt.css';
 import { withRouter, Link } from 'react-router-dom'
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
+
+const styles = {
+    card: {
+      minWidth: 275,
+      maxWidth: 300,
+      background: "#BDBDBD",
+      float: "left",
+      marginLeft: 10,
+      marginTop: 10,
+    },
+    bullet: {
+      display: 'inline-block',
+      margin: '0 2px',
+      transform: 'scale(0.8)',
+    },
+    title: {
+      fontSize: 14,
+    },
+    pos: {
+      marginBottom: 12,
+    },
+    but:{
+        textTransform: "none",
+    },
+  };
 
 class Receipt extends Component{
     constructor(props){
@@ -33,12 +65,11 @@ class Receipt extends Component{
             .then(response => {
                 if (response.status == 200){
                     if(response.data.text == "notfound"){
-                        alert("Ничего не найдено, попробуйте позже")
+                        ToastsStore.info("На данный момент вакансий нет, но скоро будут)")
                     }
                     else{
                         this.setState({ reseipts: response.data.reseipts});
-                    }
-                    
+                    }  
                 }
             })
             .catch(response => {
@@ -70,22 +101,41 @@ class Receipt extends Component{
         this.handle();
     }
     render() {
+        const { classes } = this.props;
         return (
-            <div>
-                {this.state.reseipts.map((option, idx) =>
+            <div id="mainBlock">
+                <div>
+                <p align="justify">
+                            На этой странице находятся все ваши заявки на поиск работы. Кнопка "Оплата" говорит о том что 
+                            для вас найдена работа и при полной оплате вы можете получить всю информацию. Кнопка "Искать" 
+                            означает что вы можете запустить поиск вакансий, если ранее система не нашла подходящую вам вакансию.
+                        </p>
+                </div>
+                <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.TOP_CENTER}/>
+                    {this.state.reseipts.map((option, idx) =>
                         <div key={idx}>
-                            {/* <option key={idx} value={option.id}>{option.name}</option> option.specialty_id*/}
-                            Номер квитанции: {option.id}
-                            <br></br>
-                            Специальность: {option.namespecialty}
-                            <br></br>
-                            Должность: {option.nameposition}
-                            <br></br>
-                            Ожидаемая зарплата: {option.estimated_salary}
-                            <br></br>
-                            Дата: {option.dateadded}
-                            <br></br>
-                            {option.employer_id ? <button onClick={() => { this.pay(option.id) }}>Оплата</button> : <button onClick={() => { this.search(option.specialty_id, option.position_id,option.estimated_salary,option.id) }}>Искать</button>}
+                            <Card className={classes.card}>
+                                <CardContent>
+                                        №{option.id}
+                                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                            {option.dateadded} {option.lastname} {option.name} {option.middlename}
+                                        </Typography>
+                                        <Typography variant="h5" component="h2">
+                                            {option.namespecialty}
+                                        </Typography>
+                                        <Typography className={classes.pos} color="textSecondary">
+                                            {option.nameposition}
+                                        </Typography>
+                                        <Typography variant="body2" component="p">
+                                            Ожидаемая зарплата: {option.estimated_salary}
+                                            <br />
+                                            Предоплата: {option.prepayment}
+                                        </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    {option.employer_id ? <Button style={styles.but} variant="contained" onClick={() => { this.pay(option.id) }}>Оплата</Button> : <Button style={styles.but} variant="contained" onClick={() => { this.search(option.specialty_id, option.position_id,option.estimated_salary,option.id) }}>Искать</Button>}
+                                </CardActions>
+                            </Card>
                         </div>
                     )}
             </div>
@@ -93,4 +143,4 @@ class Receipt extends Component{
     }
 }
 
-export default Receipt;
+export default withStyles(styles)(Receipt);

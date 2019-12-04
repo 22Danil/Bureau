@@ -23,7 +23,7 @@ class ReceiptOfDeregistrationRepository extends ServiceEntityRepository
     {
         $conn = $this->getEntityManager()->getConnection();
 
-        $sql = 'SELECT e.title, e.address, e.salary, r.employer_id,
+        $sql = 'SELECT e.title, e.address, e.salary, r.employer_id, e.number,
                 p.name as nameposition, s.name as namespecialty, r.dateadded
                 FROM receipt_of_deregistration r
                 INNER JOIN employers e ON r.employer_id=e.id
@@ -32,6 +32,73 @@ class ReceiptOfDeregistrationRepository extends ServiceEntityRepository
                 WHERE r.identity_id = :user_id';
         $stmt = $conn->prepare($sql);
         $stmt->execute(['user_id' => $user_id]);
+
+        // возвращает массив массивов (т.е. набор чистых данных)
+        return $stmt->fetchAll();
+    }
+
+    public function AllIncome(): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = 'SELECT s.name, SUM(r.commission) as sum 
+        FROM receipt_of_deregistration r 
+        INNER JOIN Employers e ON e.id=r.employer_id 
+        INNER JOIN specialty s ON e.specialty_id=s.id 
+        GROUP BY s.name';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+        // возвращает массив массивов (т.е. набор чистых данных)
+        return $stmt->fetchAll();
+    }
+
+    public function BorderIncome($dat_start, $dat_end): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = 'SELECT s.name, SUM(r.commission) as sum 
+        FROM receipt_of_deregistration r 
+        INNER JOIN Employers e ON e.id=r.employer_id 
+        INNER JOIN specialty s ON e.specialty_id=s.id
+        WHERE r.dateadded >= :dat_start AND r.dateadded <= :dat_end
+        GROUP BY s.name';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['dat_start' => $dat_start, 'dat_end' => $dat_end]);
+
+        // возвращает массив массивов (т.е. набор чистых данных)
+        return $stmt->fetchAll();
+    }
+
+    public function RightIncome($dat_end): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = 'SELECT s.name, SUM(r.commission) as sum 
+        FROM receipt_of_deregistration r 
+        INNER JOIN Employers e ON e.id=r.employer_id 
+        INNER JOIN specialty s ON e.specialty_id=s.id
+        WHERE r.dateadded <= :dat_end
+        GROUP BY s.name';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['dat_end' => $dat_end]);
+
+        // возвращает массив массивов (т.е. набор чистых данных)
+        return $stmt->fetchAll();
+    }
+
+    public function LeftIncome($dat_start): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = 'SELECT s.name, SUM(r.commission) as sum 
+        FROM receipt_of_deregistration r 
+        INNER JOIN Employers e ON e.id=r.employer_id 
+        INNER JOIN specialty s ON e.specialty_id=s.id
+        WHERE r.dateadded >= :dat_start
+        GROUP BY s.name';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['dat_start' => $dat_start]);
 
         // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();

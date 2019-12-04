@@ -6,7 +6,12 @@ import Start from './start'
 const Main = () => (
     <main>
         <Switch>
-            <Route exact path='/' component={Start}/>
+            <Route 
+                exact 
+                path='/'
+                // component={Start}
+                render={(props) => <Start {...props}/>}
+            />
             <Route path='/home' component={MainPage}/>
         </Switch>
     </main>

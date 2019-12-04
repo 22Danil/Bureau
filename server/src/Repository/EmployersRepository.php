@@ -27,7 +27,8 @@ class EmployersRepository extends ServiceEntityRepository
                 FROM Employers e
                 INNER JOIN position p ON e.position_id=p.id
                 INNER JOIN specialty s ON e.specialty_id=s.id
-                WHERE p.id = :value_positions AND  s.id = :value_specialty AND e.salary > :EstimatedSalary';
+                WHERE p.id = :value_positions AND  s.id = :value_specialty AND e.salary > :EstimatedSalary
+                ORDER BY e.salary DESC';
         $stmt = $conn->prepare($sql);
         $stmt->execute(['value_positions' => $value_positions, 'value_specialty' => $value_specialty, 'EstimatedSalary' => $EstimatedSalary]);
 
@@ -39,7 +40,7 @@ class EmployersRepository extends ServiceEntityRepository
     {
         $conn = $this->getEntityManager()->getConnection();
 
-        $sql = 'SELECT e.id, e.title, e.address, e.number, e.salary, p.name as position, p.id as position_id, s.name as specialty, s.id as specialty_id
+        $sql = 'SELECT e.id, e.title, e.address, e.number, e.salary, e.dateadded, p.name as position, p.id as position_id, s.name as specialty, s.id as specialty_id
                 FROM Employers e
                 INNER JOIN position p ON e.position_id=p.id
                 INNER JOIN specialty s ON e.specialty_id=s.id';

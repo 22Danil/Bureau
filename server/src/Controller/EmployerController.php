@@ -129,4 +129,113 @@ class EmployerController extends AbstractController
             return $response;
         }
     }
+
+    /**
+     * @Route("/api/changeemployer", name="changeemployer")
+     * @param Request $request
+     * @param EntityManagerInterface $em
+     * @return Response
+     */
+    public function change(Request $request, EntityManagerInterface $em)
+    {
+        try{
+            $key_JWT = "wejpjxczvwmeskms";
+            $Data = json_decode($request->getContent());
+            $title = $Data->title;
+            $address = $Data->address;
+            $number = $Data->number;
+            $salary = $Data->salary;
+            $id = $Data->id;
+            $JWT = $Data->token;
+            $decoded = JWT::decode($JWT, $key_JWT, array('HS256'));
+            $user_id = $decoded->id;
+            $user_role = $decoded->role;
+
+            if($user_role == 'worker' || $user_role == 'admin'){
+
+                $em = $this->getDoctrine()->getManager();
+                $employerNew = $this->getDoctrine()->getRepository(Employers::class)->find($id);
+        
+                $employerNew->setTitle($title);
+                $employerNew->setAddress($address);
+                $employerNew->setNumber($number);
+                $employerNew->setSalary($salary);
+
+                $em->persist($employerNew);
+                // на самом деле выполнить запросы (т.е. запрос INSERT)
+                $em->flush();
+
+                $response = new Response();
+                $response->setContent(json_encode(['text' => "ok"]));
+                $response->setStatusCode(Response::HTTP_OK );
+                return $response;
+            }
+            else{
+                $response = new Response();
+                $response->setContent(json_encode(['text' => "notok"]));
+                $response->setStatusCode(Response::HTTP_UNAUTHORIZED);
+                return $response;
+            }
+
+
+        }
+        catch(\Exception $e){
+            error_log($e->getMessage());
+            $response = new Response();
+            $response->setContent(json_encode(['test' => $e->getMessage()]));
+            $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR );
+            return $response;
+        }
+    }
+
+    /**
+     * @Route("/api/deleteemployer", name="deleteemployer")
+     * @param Request $request
+     * @param EntityManagerInterface $em
+     * @return Response
+     */
+    public function delete(Request $request, EntityManagerInterface $em)
+    {
+        try{
+            $key_JWT = "wejpjxczvwmeskms";
+            $Data = json_decode($request->getContent());
+            $id = $Data->id;
+            $JWT = $Data->token;
+            $decoded = JWT::decode($JWT, $key_JWT, array('HS256'));
+            $user_id = $decoded->id;
+            $user_role = $decoded->role;
+
+            if($user_role == 'worker' || $user_role == 'admin'){
+
+                $em = $this->getDoctrine()->getManager();
+                $employerDel = $this->getDoctrine()->getRepository(Employers::class)->find($id);
+
+                $em->remove($employerDel);
+                $em->flush();
+
+                $response = new Response();
+                $response->setContent(json_encode(['text' => "ok"]));
+                $response->setStatusCode(Response::HTTP_OK );
+                return $response;
+            }
+            else{
+                $response = new Response();
+                $response->setContent(json_encode(['text' => "notok"]));
+                $response->setStatusCode(Response::HTTP_UNAUTHORIZED);
+                return $response;
+            }
+
+
+        }
+        catch(\Exception $e){
+            error_log($e->getMessage());
+            $response = new Response();
+            $response->setContent(json_encode(['test' => $e->getMessage()]));
+            $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR );
+            return $response;
+        }
+    }
+
+
+
 }

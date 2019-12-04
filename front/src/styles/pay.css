@@ -11,3 +11,16 @@
     top:20%;
     overflow-y: auto; 
 }
+#test{
+    margin-left: 80px;
+}
+#centrtwo{
+    /* position: absolute;
+    left: 40%; */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  
