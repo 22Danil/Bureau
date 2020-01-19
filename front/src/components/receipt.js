@@ -87,9 +87,6 @@ class Receipt extends Component{
                 if (response.status == 200){
                     console.log(response);
                     this.setState({ reseipts: response.data.reseipts});
-                    /*localStorage.setItem('token', response.data.token);
-                    localStorage.setItem('role', response.data.role);
-                    this.props.history.push('/home')*/
                 }
             })
             .catch(response => {

@@ -9,7 +9,6 @@ const Main = () => (
             <Route 
                 exact 
                 path='/'
-                // component={Start}
                 render={(props) => <Start {...props}/>}
             />
             <Route path='/home' component={MainPage}/>

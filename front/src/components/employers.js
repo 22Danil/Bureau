@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import '../styles/employers.css';
-import { withRouter, Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
 import MaterialTable from 'material-table';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
 
 const styles = {
@@ -28,11 +22,6 @@ const styles = {
       selectEmpty:{
           width:200,
           marginLeft:10,
-      },
-      root2: {
-        // background: "grey",
-        // marginBottom: "10px"
-        
       },
       whiteColor: {
         color: "white"
@@ -64,7 +53,6 @@ class Employers extends Component{
             .then(response => {
                 if (response.status == 200){
                     console.log("ok")
-                    //this.setState({ employers: response.data.employers});
                 }
             })
             .catch(response => {
@@ -93,7 +81,6 @@ class Employers extends Component{
             .then(response => {
                 if (response.status == 200){
                     console.log("ok")
-                    //this.setState({ employers: response.data.employers});
                 }
             })
             .catch(response => {

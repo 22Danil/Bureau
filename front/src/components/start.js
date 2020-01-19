@@ -63,7 +63,6 @@ class Start extends React.Component{
                 }
             })
                 .then(response => {
-                    // console.log(response);
                     localStorage.setItem('token', response.data.token);
                     localStorage.setItem('role', response.data.role);
                     localStorage.setItem('name', response.data.name);
@@ -71,9 +70,6 @@ class Start extends React.Component{
                 })
                 .catch(response => {
                     ToastsStore.error("Неверный логин или пароль!")
-                    //ToastsStore.success("Неверный логин или пароль!")
-                    //ToastsStore.info("Неверный логин или пароль!")
-                    //ToastsStore.warning("Неверный логин или пароль!")
                 })
         }
     }
@@ -99,9 +95,6 @@ class Start extends React.Component{
                 })
                 .catch(response => {
                     ToastsStore.warning("Такой логин уже занят!")
-                    //ToastsStore.error("Неверный логин или пароль!")
-                    //ToastsStore.success("Неверный логин или пароль!")
-                    //ToastsStore.info("Неверный логин или пароль!")
                 })
             }
         }
@@ -111,7 +104,6 @@ class Start extends React.Component{
         localStorage.removeItem('role');
     }
     componentDidMount() {
-        // custom rule will have name 'isPasswordMatch'
         ValidatorForm.addValidationRule('isPasswordMatch', (value) => {
             if (value !== this.state.password) {
                 return false;
@@ -180,15 +172,7 @@ class Start extends React.Component{
                     <br></br>
                     <Button type="submit" style={styles.but} variant="contained" color="primary">Войти</Button>
                     <Button style={styles.but} variant="contained" color="primary" onClick={this.signUpMain}>Главная</Button>
-                    {/* <button onClick={this.signIn}>Войти</button><br></br> onClick={this.signIn}*/}
-                    </ValidatorForm>
-                    
-                    {/* <input name="login" placeholder="Логин" value={this.state.login} onChange={this.onChange}></input><br></br>
-                    <input name="password" type="password" placeholder="Пароль" value={this.state.password} onChange={this.onChange}></input><br></br>
-                    <button onClick={this.signIn}>Войти</button><br></br>
-                    <button onClick={this.signUpButton}>Регистрация</button>
-                    <button onClick={this.signUpMain}>Главная</button> */}
-                    
+                    </ValidatorForm>      
             </div>
           } else if (this.state.showElse == "signUp") {
             test = <div id="signup">
@@ -313,15 +297,7 @@ class Start extends React.Component{
                     <br></br>
                     <Button type="submit" style={styles.but} variant="contained" color="primary">Зарегистрироваться</Button>
                     <Button style={styles.but} variant="contained" color="primary" onClick={this.signUpMain}>Главная</Button>
-                    {/* <button onClick={this.signUp}>Войти</button><br></br> */}
                     </ValidatorForm>
-                    {/* <input name="name" placeholder="Ваше имя" value={this.state.name} onChange={this.onChange}></input><br></br>
-                    <input name="login" placeholder="Логин" value={this.state.login} onChange={this.onChange}></input><br></br>
-                    <input name="password" type="password" placeholder="Пароль" value={this.state.password} onChange={this.onChange}></input><br></br>
-                    <input name="passwordAgain" type="password" placeholder="Пароль еще раз" value={this.state.passwordAgain} onChange={this.onChange}></input><br></br>
-                    <button onClick={this.signUp}>Зарегистрироваться</button><br></br>
-                    <button onClick={this.signInButton}>Вход</button>
-                    <button onClick={this.signUpMain}>Главная</button> */}
             </div>
           }
         return (

@@ -32,25 +32,15 @@ class SpecialtyRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 
     public function findId($value_specialty): array
     {
-        /*$conn = $this->getEntityManager()->getConnection();
-
-        $sql = 'SELECT * FROM specialty p WHERE p.name = :value_specialty';
-        $stmt = $conn->prepare($sql);
-        $stmt->execute(['value_specialty' => $value_specialty]);
-
-        // возвращает массив массивов (т.е. набор чистых данных)
-        return $stmt->fetchAll();*/
         $em = $this->getEntityManager();
         $query = $em->createQuery(
             'SELECT p FROM App\Entity\Specialty p WHERE p.name = :value_specialty'
         )->setParameter('value_specialty', $value_specialty);
-        // возвращает массив объектов Товар
         return $query->execute();
     }
 

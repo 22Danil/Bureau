@@ -26,35 +26,26 @@ class MainPage extends React.Component {
                 <Route 
                 path='/home/users' 
                 render={(props) => <Users {...props}/>}
-                // component={Users}
                 />
                 <Route 
                 path='/home/employers' 
-                // component={Employers}
                 render={(props) => <Employers {...props}/>}
                 />
                 <Route 
                 path='/home/income' 
-                // component={Income}
                 render={(props) => <Income {...props}/>}
                 />
                 <Route path='/home/admins' component={Admins}/>
                 <Route path='/home/work' component={Work}/>
                 <Route
                 path='/home/receipt' 
-                // component={Receipt}
                 render={(props) => <Receipt {...props}/>}
                 />
                 <Route
                 path='/home/form'
-                // component={Form}
                 render={(props) => <Form {...props}/>}
                 />
                 <Route exact path='/home' component={Home}/>
-                    {/* <Route exact path='/home' component={Home}/>
-                    <Route path='/home/form' component={Form}/>
-                    <Route path='/home/receipt' component={Receipt}/>
-                    <Route path='/home/receipt/:id' component={Pay}/> */}
                 </Switch>
                 <Basement />
             </div>

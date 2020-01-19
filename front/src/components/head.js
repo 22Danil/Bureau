@@ -10,7 +10,6 @@ import {ToastsContainer, ToastsStore} from 'react-toasts';
 
 const styles = {
     but:{
-        // margin: 5
         textTransform: "none",
         fontSize: 18,
         float:"left",
@@ -18,7 +17,6 @@ const styles = {
         marginLeft:70
     },
     but3:{
-        // margin: 5
         textTransform: "none",
         fontSize: 18,
         float:"left",

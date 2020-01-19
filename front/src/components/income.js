@@ -30,11 +30,6 @@ const styles = {
           width:200,
           marginLeft:10,
       },
-      root2: {
-        // background: "grey",
-        // marginBottom: "10px"
-        
-      },
       whiteColor: {
         color: "white"
       }
@@ -45,8 +40,8 @@ class Income extends Component{
         super(props);
         this.state = {
             incomes: [],
-            start: "2019-11-30",
-            end: "2019-12-30",
+            start: "2019-12-11",
+            end: "2019-12-12",
             check: "",
         };
         this.handle = this.handle.bind(this);
@@ -76,9 +71,6 @@ class Income extends Component{
                 this.setState({ check: "4"});
             }
         }
-        // const { format } = require('date-fns');
-        // console.log(e)
-        // console.log(`Heute ist der: ${format(e, 'yyyy-MM-dd')}`);
     }
     onChangeEnd(e){
         console.log(e);
@@ -156,8 +148,6 @@ class Income extends Component{
         const { classes } = this.props;
         return (
             <div id="mainBlock">
-                {/* <div id="centrthree">
-                    <p id="test"> */}
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <KeyboardDatePicker
                             disableToolbar
@@ -201,9 +191,6 @@ class Income extends Component{
                             />
                     </MuiPickersUtilsProvider>
                     <Button style={styles.but} variant="contained" color="primary" onClick={() => { this.search() }}>Поиск</Button>
-                    {/* </p>
-                    
-                </div> */}
                 <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.TOP_CENTER}/>
                     <MaterialTable
                          localization={{

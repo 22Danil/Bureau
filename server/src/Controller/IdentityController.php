@@ -314,8 +314,6 @@ class IdentityController extends AbstractController
                 $response->setStatusCode(Response::HTTP_UNAUTHORIZED);
                 return $response;
             }
-
-
         }
         catch(\Exception $e){
             error_log($e->getMessage());

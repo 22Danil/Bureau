@@ -120,10 +120,10 @@ class ReceiptController extends AbstractController
             $ReceiptOfDer->setEmployer($EMPid);
             $ReceiptOfDer->setCommission($cost);
             $ReceiptOfDer->setDateadded(new \DateTime($datenow));
-            // скажите Doctrine, что вы (в итоге) хотите сохранить Товар (пока без запросов)
+
             $em->persist($ReceiptOfDer);
             $em->persist($ReceiptOfReg);
-            // на самом деле выполнить запросы (т.е. запрос INSERT)
+
             $em->flush();
 
             $response = new Response();
@@ -174,7 +174,7 @@ class ReceiptController extends AbstractController
                 $ReceiptOfReg->setEmployer($EMPid);
 
                 $em->persist($ReceiptOfReg);
-                // на самом деле выполнить запросы (т.е. запрос INSERT)
+                
                 $em->flush();
 
                 $receipts = $this->getDoctrine()

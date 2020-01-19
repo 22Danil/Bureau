@@ -34,17 +34,8 @@ class IdentityRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['login' => $login]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
-        //разобратся как получать объекты
-        /*$em = $this->getEntityManager();
-        $query = $em->createQuery(
-            'SELECT u
-        FROM App\Entity\Identity u
-        WHERE u.login = :login'
-        )->setParameter('login', $login);
-        // возвращает массив объектов Товар
-        return $query->execute();*/
+        
     }
 
     public function AllIdentity($user_id): array
@@ -57,7 +48,6 @@ class IdentityRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['user_id' => $user_id]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 
@@ -71,7 +61,6 @@ class IdentityRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 

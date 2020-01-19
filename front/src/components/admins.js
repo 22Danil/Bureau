@@ -28,11 +28,6 @@ const styles = {
           width:200,
           marginLeft:10,
       },
-      root2: {
-        // background: "grey",
-        // marginBottom: "10px"
-        
-      },
       whiteColor: {
         color: "white"
       }

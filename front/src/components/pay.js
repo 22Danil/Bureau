@@ -2,15 +2,10 @@ import React, { Component, useState } from "react";
 import axios from "axios";
 import '../styles/pay.css';
 import { withStyles } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import Button from '@material-ui/core/Button';
-import InputLabel from '@material-ui/core/InputLabel';
 import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
 
 const styles = {
     but:{
@@ -30,11 +25,6 @@ const styles = {
           width:200,
           marginLeft:10,
       },
-      root2: {
-        // background: "grey",
-        // marginBottom: "10px"
-        
-      },
       whiteColor: {
         color: "white"
       }
@@ -53,7 +43,7 @@ class Pay extends Component{
     }
     pay(){
         if(this.state.card != ""){
-            let str = this.state.card;//5168757402783846
+            let str = this.state.card;
             let result = str.match(/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/g);
             if(!result){
                 ToastsStore.warning("С номером карты что-то не так")
@@ -72,7 +62,6 @@ class Pay extends Component{
                 })
                 .then(response => {
                     if (response.status == 200){
-                        // console.log(response);
                         this.props.history.push('/home/receipt')
                         ToastsStore.success("Оплата прошла успешно! Перейдите в раздел 'Работа' для более подробной информации!")
                     }
@@ -127,7 +116,6 @@ class Pay extends Component{
                             label="Номер карты"
                             name="card"
                             onChange={this.onChange}
-                            // defaultValue={this.state.card}
                             value={this.state.card}
                             validators={['required']}
                             errormessages={['this field is required']}

@@ -32,7 +32,6 @@ class PositionRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 
@@ -44,7 +43,6 @@ class PositionRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['value_positions' => $value_positions]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 

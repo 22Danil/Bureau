@@ -14,20 +14,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
-// const styles = {
-//     but:{
-//         margin: 5
-//     },
-//     root: {
-//         margin: 5
-//       },
-//       input: {
-//         color: "white",
-//       },
-//       lab: {
-//         color: "white",
-//       },
-//   };
 const styles = {
     but:{
         margin: 5,
@@ -49,19 +35,10 @@ const styles = {
           width:200,
           marginLeft:10,
       },
-      root2: {
-        // background: "grey",
-        // marginBottom: "10px"
-        
-      },
       whiteColor: {
         color: "white"
       }
   };
-
-// const ToPost = withRouter(({ history, ID }) => (
-//     <Button variant="primary" onClick={() => { history.push(`/post/${ID}`) }}>Подробнее</Button>
-// ));
 
 class content extends React.Component{
     constructor(props){
@@ -248,7 +225,6 @@ class content extends React.Component{
                             label="Название"
                             name="title"
                             onChange={this.onChange}
-                            // defaultValue={this.state.EstimatedSalary}
                             value={this.state.title} 
                             validators={['required']}
                             errormessages={['this field is required']}
@@ -267,7 +243,6 @@ class content extends React.Component{
                             label="Адрес"
                             name="address"
                             onChange={this.onChange}
-                            // defaultValue={this.state.EstimatedSalary}
                             value={this.state.address} 
                             validators={['required']}
                             errormessages={['this field is required']}
@@ -287,7 +262,6 @@ class content extends React.Component{
                             label="Номер"
                             name="number"
                             onChange={this.onChange}
-                            // defaultValue={this.state.EstimatedSalary}
                             value={this.state.number} 
                             validators={['required']}
                             errormessages={['this field is required']}
@@ -306,7 +280,6 @@ class content extends React.Component{
                             label="Зарплата"
                             name="salary"
                             onChange={this.onChange}
-                            // defaultValue={this.state.EstimatedSalary}
                             value={this.state.salary} 
                             validators={['required']}
                             errormessages={['this field is required']}

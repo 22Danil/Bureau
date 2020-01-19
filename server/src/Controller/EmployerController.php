@@ -102,9 +102,7 @@ class EmployerController extends AbstractController
                 $Employer->setPosition($idPositions);
                 $Employer->setSalary($salary);
                 $Employer->setDateadded(new \DateTime($datenow));
-                // скажите Doctrine, что вы (в итоге) хотите сохранить Товар (пока без запросов)
                 $em->persist($Employer);
-                // на самом деле выполнить запросы (т.е. запрос INSERT)
                 $em->flush();
 
                 $response = new Response();
@@ -162,7 +160,6 @@ class EmployerController extends AbstractController
                 $employerNew->setSalary($salary);
 
                 $em->persist($employerNew);
-                // на самом деле выполнить запросы (т.е. запрос INSERT)
                 $em->flush();
 
                 $response = new Response();
@@ -235,7 +232,4 @@ class EmployerController extends AbstractController
             return $response;
         }
     }
-
-
-
 }

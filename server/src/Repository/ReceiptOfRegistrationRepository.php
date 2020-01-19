@@ -32,7 +32,7 @@ class ReceiptOfRegistrationRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['user_id' => $user_id]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
+
         return $stmt->fetchAll();
     }
 

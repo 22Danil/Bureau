@@ -32,7 +32,6 @@ class EmployersRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['value_positions' => $value_positions, 'value_specialty' => $value_specialty, 'EstimatedSalary' => $EstimatedSalary]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 
@@ -47,7 +46,6 @@ class EmployersRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 

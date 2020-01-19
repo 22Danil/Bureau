@@ -33,7 +33,6 @@ class ReceiptOfDeregistrationRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['user_id' => $user_id]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 
@@ -49,7 +48,6 @@ class ReceiptOfDeregistrationRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 
@@ -66,7 +64,6 @@ class ReceiptOfDeregistrationRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['dat_start' => $dat_start, 'dat_end' => $dat_end]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 
@@ -83,7 +80,6 @@ class ReceiptOfDeregistrationRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['dat_end' => $dat_end]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 
@@ -100,7 +96,6 @@ class ReceiptOfDeregistrationRepository extends ServiceEntityRepository
         $stmt = $conn->prepare($sql);
         $stmt->execute(['dat_start' => $dat_start]);
 
-        // возвращает массив массивов (т.е. набор чистых данных)
         return $stmt->fetchAll();
     }
 

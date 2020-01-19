@@ -112,9 +112,7 @@ class FormController extends AbstractController
                 $Reciept->setPaid("false");
                 $Reciept->setEmployer($EMPid);
                 $Reciept->setDateadded(new \DateTime($datenow));
-                // скажите Doctrine, что вы (в итоге) хотите сохранить Товар (пока без запросов)
                 $em->persist($Reciept);
-                // на самом деле выполнить запросы (т.е. запрос INSERT)
                 $em->flush();
             }
             catch(\Exception $e){
@@ -136,9 +134,7 @@ class FormController extends AbstractController
                 $Reciept->setPaid("false");
                 $Reciept->setPrepayment($prepayment);
                 $Reciept->setDateadded(new \DateTime($datenow));
-                // скажите Doctrine, что вы (в итоге) хотите сохранить Товар (пока без запросов)
                 $em->persist($Reciept);
-                // на самом деле выполнить запросы (т.е. запрос INSERT)
                 $em->flush();
             }
             catch(\Exception $e){

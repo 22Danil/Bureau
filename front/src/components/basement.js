@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import '../styles/basement.css';
-import { Link } from 'react-router-dom'
 import fb from '../images/fb.png';
 import tel from '../images/tel.png';
 
